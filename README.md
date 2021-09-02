@@ -1,5 +1,5 @@
 # Mis apuntes de HTML5
-**Indice**
+**Índice:**
   * [Sintaxis](#sintaxis)
     * [Formato de etiquetas](#formato-de-etiquetas)
     * [Comentarios](#comentarios)
