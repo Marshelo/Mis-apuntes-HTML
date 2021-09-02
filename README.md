@@ -160,7 +160,3 @@ En la etiqueta `<video>` está la opción `controls` para activar los controles 
 
 
 ![Descripción de la rae vista desde el buscador google](./src/pag-rae.png)
-<iframe width="600" height = "420"
-src="https://www.youtube.com/embed/qKf2EwInKbA">
-</iframe>
-hola
