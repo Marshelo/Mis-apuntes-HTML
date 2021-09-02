@@ -170,7 +170,7 @@ Esta etiqueta sirve para mostrar una breve descripción de la página web en el 
 </section>
 ```
 En la etiqueta `<video>` está la opción `controls` para activar los controles básicos de reproducción de un video.
-> Nota: sin `controls` no se puede reproducir el video manualmente, y como está penalisado en los navegadores más populares la reproducción de un video automaticamente, nunca se reproducirá el video.
+> Nota: sin `controls` no se puede reproducir el video manualmente, y como está penalizado en los navegadores más populares la reproducción de un video automaticamente, nunca se reproducirá el video.
 
 Con `preload="auto"` se especifica que el navegador al cargar la página, va a cargar con él el video, por lo que para el usuario será más cómodo, ya que no tendrá que esperar a que cargue cuando le de play.
 
