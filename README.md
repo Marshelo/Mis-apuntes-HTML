@@ -11,6 +11,8 @@
   * [Etiquetas básicas](#etiquetas-básicas)
     * [Párrafos](#párrafos)
     * [Saltos de linea](#salto-de-linea)
+  * [Metadatos](#metadatos)
+    * [Descripción](#descripción)
   * [Multimedia](#multimedia)
     * [Imágenes](#imágenes)
     * [Video](#video)
@@ -36,15 +38,16 @@ La forma en que en html comunicamos nuestras ideas es en un formato peculiar, el
     <nombre-etiqueta opción info-extra="valor">
     ```
     y el navegador lo interpretará perfectamente.
+> Nota: no importa cuantos saltos de linea, espacios o tabs pongas dentro del contenido de una etiqueta, nunca afectará su funcionamiento, a no ser que fuerces a que ocurra algo.
 
 Y por último unos ejemplos:
-* Etiqueta de apertura y cierre
+* Etiqueta de apertura y cierre:
     ```html
     <video controls preload="auto">
         <source src="https://storage.coverr.co/videos/TYNd6glBOcCmIS7cbW4hoyEOtoA9fzXo?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjMwNTY0NDQ1fQ.tGc5QS6w3ooK7sN6eLz6_ZPHeJb_IHciKNAosisaXew">
     </video>
     ```
-* Solo una etiqueta
+* Solo una etiqueta:
     ```html
     <meta charset="UTF-8" />
     ```
@@ -61,14 +64,14 @@ En html todo lo que esté entremedio de `<!--` y `-->` será ignorado por el nav
    del 😎
 comentario -->
 ```
-> Cuidado: Si no cierras con "`-->`" el comentario, todo el código que venga después será también un comentario.
+> Cuidado!: Si no cierras con "`-->`" el comentario, todo el código que venga después será también un comentario, así que dejará de ser funcional.
 
 
 ------------
 
 
 ## Lo Primero
-Antes que nada hay que crear un archivo con la extensión `.html` para empezar a escribir código.
+Antes que nada tienes que abrir tu editor de código favorito y crear un archivo con la extensión `.html`.
 
 ### Herramienta del navegador
 En los navegadores más populares, como chrome, firefox, etc, hay una herramienta que nos permite ver todo el código fuente de una página web. Por lo general esta herramienta se activa con la tecla `F12`, pero en algunos casos puede que sea con `Fn + F12`.
@@ -86,9 +89,10 @@ El esqueleto de un html siempre será el siguiente:
     </body>
 </html>
 ```
-Lo primero que verás es un `<!DOCTYPE ...>` lo cuál es de extrema importancia, ya que esta etiqueta definirá cómo el navegador interpretará el archivo html. Con `<!DOCTYPE html>` el archivo se interpretará como HTML5.
+`<!DOCTYPE ...>` es de extrema importancia, ya que esta etiqueta definirá cómo el navegador interpretará el archivo html. Con `<!DOCTYPE html>` el archivo se interpretará como HTML5. La etiqueta `<html>` puede ser implicita, pero para poner `lang="idioma"` es estrictamente necesario ponerla explicita. En `lang="idioma"` se e indica al buscador cuál es el idioma del html, para hacer una búsqueda más eficiente.
+> Nota: "es" es español, y "en", inglés.
 ### Head
-En el head va todo el código que tiene que cargar antes de visualizar cualquier cosa en la página, aquí van cosas como los meta datos, el titulo de la página, la descripción, entre otros.
+El head es todo el código que tiene que cargar antes de visualizar cualquier cosa en la página, aquí van cosas como los metadatos, hojas de estilos, el titulo de la página, la descripción, entre otros.
 ```html
 <head>
     <meta charset="UTF-8">
@@ -101,7 +105,10 @@ En el head va todo el código que tiene que cargar antes de visualizar cualquier
 > Nota: estas etiquetas y cada metadato será aclarado más adelante; es solo un ejemplo.
 
 ### Body
-
+El body es el todo cuerpo de la página, desde el header hasta el footer. Aquí pueden ir etiquetas como las de titulos, párrafos, multimedia, tablas, entre otros.
+```html
+<!-- Completar :) -->
+```
 
 ------------
 
@@ -115,13 +122,31 @@ En html se usa la etiqueta `<p>` para escribir en párrafos:
 <p>Y aquí otro párrafo, porque sí no más :P</p>
 ```
 ### Salto de linea
-Cuando escribes con saltos de lineas normales (con ENTER), los párrafos no lo leerán, ni ninguna etiqueta, y es por eso que existe esta etiqueta solo para hacer saltos de linea:
+Cuando escribes con saltos de lineas normales (con ENTER), los párrafos no lo leerán ni ninguna etiqueta, y es por eso que existe esta etiqueta solo para hacer saltos de linea:
 ```html
-<p>Una gran linea de texto<br/>
-Más texto aún<br>
-Y todavía más texto.
+<p>
+Una linea.<br/>
+Una segunda linea.<br>
+Y otra más.
 </p>
 ```
+
+------------
+
+## Metadatos
+### Descripción
+Esta etiqueta sirve para mostrar una breve descripción de la página web en el buscador.
+```html
+<head>
+    <meta name="description" content="Contenido de la descripción">
+</head>
+```
+##### Ejemplo
+* En google:
+![Descripción de la rae vista desde el buscador google](./src/pag-rae.png)
+* Código fuente:
+![Descripción de la rae vista desde el buscador google](./src/descripcion-rae.png)
+
 
 ------------
 
@@ -129,34 +154,27 @@ Y todavía más texto.
 ## Multimedia
 ### Imágenes
 ```html
-<body>
 <figure>
     <img src="URL o archivo" alt="Txt si la img no se ve">
     <figcaption>Texto a los pies de la img</figcaption>
 </figure>
-</body>
 ```
 `<figure>` es lo mismo que `<div>`, pero semánticamente más apropiado, y además viene con una etiqueta propia: `<figcaption>`, la cual sirve para mostrar texto a los pies de la imagen.
 
 ### Video
 ```html
-<body>
 <section>
     <video controls preload="auto">
         <source src="URL o archivo#t=73,88">
     </video>
 </section>
-</body>
 ```
-En la etiqueta `<video>` está la opción `controls` para activar los controles básicos de reproducción de un video. En `preload="auto"` se
+En la etiqueta `<video>` está la opción `controls` para activar los controles básicos de reproducción de un video.
+> Nota: sin `controls` no se puede reproducir el video manualmente, y como está penalisado en los navegadores más populares la reproducción de un video automaticamente, nunca se reproducirá el video.
+
+Con `preload="auto"` se especifica que el navegador al cargar la página, va a cargar con él el video, por lo que para el usuario será más cómodo, ya que no tendrá que esperar a que cargue cuando le de play.
 
 ------------
 
 ## Enlaces útiles
-* https://i.emezeta.com/weblog/html5-cheatsheet/html5-cheatsheet-2019.pdf
-
-
-------------
-
-
-![Descripción de la rae vista desde el buscador google](./src/pag-rae.png)
+* [Todas las etiquetas HTML](https://i.emezeta.com/weblog/html5-cheatsheet/html5-cheatsheet-2019.pdf "Torpedo HTML")
