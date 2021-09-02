@@ -159,7 +159,7 @@ Esta etiqueta sirve para mostrar una breve descripción de la página web en el 
     <figcaption>Texto a los pies de la img</figcaption>
 </figure>
 ```
-`<figure>` es lo mismo que `<div>`, pero semánticamente más apropiado, y además viene con una etiqueta propia: `<figcaption>`, la cual sirve para mostrar texto a los pies de la imagen.
+`<figure>` es lo mismo que `<div>`, pero semánticamente más apropiado, y además viene con una etiqueta propia, `<figcaption>`, la cual sirve para mostrar texto a los pies de la imagen.
 
 ### Video
 ```html
