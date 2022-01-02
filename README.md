@@ -1,5 +1,6 @@
 # Mis apuntes de HTML5
 **Índice:**
+  * [Resumen](#resumen)
   * [Sintaxis](#sintaxis)
     * [Formato de etiquetas](#formato-de-etiquetas)
     * [Comentarios](#comentarios)
@@ -22,9 +23,22 @@
 ------------
 
 
+## Resumen
+**H***yper* <br/>
+**T***ext* <br/>
+**M***arkup* <br/>
+**L***anguage* <br/>
+
+HTML no es un lenguaje de programación, es, como dice su nombre en inglés, un lenguaje de marcado de hipertexto.
+
+> Definición de *hipertexto*: "Conjunto estructurado de textos, gráficos, etc., unidos entre sí por enlaces y conexiones lógicas." (RAE).
+
+Este lenguaje se usa para hacer el formato base de una página WEB para luego por medio de lenguajes de programación agregarle estilo y funciones, como CSS y JS, respectivamente.
+
+
 ## Sintaxis
 ### Formato de etiquetas
-La forma en que en html comunicamos nuestras ideas es en un formato peculiar, el cual consiste en etiquetas. Estas etiquetas pueden estar escritas de 3 formas diferentes:
+La forma en la que le damos instrucciones a HTML es a través de etiquetas. Estas etiquetas pueden estar escritas de 3 formas diferentes:
 * Con una etiqueta para abrir y otra para cerrar.
     ```html
     <nombre-etiqueta opción info-extra="valor">Contenido de la etiqueta</nombre-etiqueta>
@@ -38,7 +52,7 @@ La forma en que en html comunicamos nuestras ideas es en un formato peculiar, el
     <nombre-etiqueta opción info-extra="valor">
     ```
     y el navegador lo interpretará perfectamente.
-> Nota: no importa cuantos saltos de linea, espacios o tabs pongas dentro del contenido de una etiqueta, nunca afectará su funcionamiento, a no ser que fuerces a que ocurra algo.
+> Nota: Por lo general no importa cuantos saltos de linea, espacios o tabs pongas dentro del contenido de una etiqueta, nunca afectará su funcionamiento.
 
 Y por último unos ejemplos:
 * Etiqueta de apertura y cierre:
