@@ -35,6 +35,10 @@ HTML no es un lenguaje de programación, es, como dice su nombre en inglés, un 
 
 Este lenguaje se usa para hacer el formato base de una página WEB para luego por medio de lenguajes de programación agregarle estilo y funciones, como CSS y JS, respectivamente.
 
+ Así se ve GitHub solo con HTML (sin css):
+ 
+<img src="./src/github-sin-css.png" width="400px"/>
+
 
 ## Sintaxis
 ### Formato de etiquetas
